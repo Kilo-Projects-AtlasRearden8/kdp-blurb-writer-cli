@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import random
+
 from .provider import BlurbProvider
 
 
@@ -30,7 +32,6 @@ class MockProvider(BlurbProvider):
 
     def generate(self, prompt: str) -> str:
         premise = self._extract_premise(prompt) or "a remarkable story"
-        import random
 
         seeded = random.Random(sum(ord(ch) for ch in premise))
         opening = seeded.choice(self._OPENINGS).format(premise=premise)
