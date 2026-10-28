@@ -1,0 +1,2 @@
+[console_scripts]
+kdp-blurb-writer = kdp_blurb_writer.cli:main

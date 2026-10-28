@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kdp-blurb-writer"
+version = "0.1.0"
+description = "Local-first CLI that writes KDP book blurbs from a short premise using a configurable OpenAI-compatible endpoint (default Ollama)."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Asdale Dynamics, LLC"}]
+keywords = ["kdp", "book-blurb", "ollama", "llm", "cli", "markdown"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+kdp-blurb-writer = "kdp_blurb_writer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
